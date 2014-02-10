@@ -1,0 +1,9 @@
+# config files
+
+configs/config.php
+
+# images directories
+
+images/maps
+images/icons
+images/tmp
