@@ -78,58 +78,19 @@ var mn_items=[
 		[8,"Idols"],
 		[7,"Librams"],
 		[9,"Totems"]
-		//[10,"Sigils"]
 	]],
 	[1,"Containers",,[
 		[0,"Bags"],
 		[3,"Enchanting Bags"],
-		//[4,"Engineering Bags"],
-		//[5,"Gem Bags"],
 		[2,"Herb Bags"],
-		//[8,"Inscription Bags"],
-		//[7,"Leatherworking Bags"],
-		//[6,"Mining Bags"],
 		[1,"Soul Bags"]
 	]],
-	[0,"Consumables",,[
-		[7,"Bandages"],
-		[0,"Consumables"],
-		[2,"Elixirs"],
-		[3,"Flasks"],
-		[5,"Food & Drinks"],
-		[6,"Item Enhancements (Permanent)"],
-		[1,"Potions"],
-		[4,"Scrolls"],
-		[8,"Other"]
-	]],
-	/*[16,"Glyphs",,[
-		[6,"Death Knight"],
-		[11,"Druid"],
-		[3,"Hunter"],
-		[8,"Mage"],
-		[2,"Paladin"],
-		[5,"Priest"],
-		[4,"Rogue"],
-		[7,"Shaman"],
-		[9,"Warlock"],
-		[1,"Warrior"]
-	]],*/
+	[0,"Consumables"],
 	[7,"Trade Goods",,[
-		[14,"Armor Enchantments"],
-		[5,"Cloth"],
+        [0,"Trade Goods"],
 		[3,"Devices"],
-		[10,"Elemental"],
-		[12,"Enchanting"],
 		[2,"Explosives"],
-		[9,"Herbs"],
-		//[4,"Jewelcrafting"],
-		[6,"Leather"],
-		[13,"Materials"],
-		[8,"Meat"],
-		[7,"Metal & Stone"],
-		[1,"Parts"],
-		[15,"Weapon Enchantments"],
-		[11,"Other"]
+		[1,"Parts"]
 	]],
 	[6,"Projectiles",,[
 		[2,"Arrows"],
@@ -148,31 +109,10 @@ var mn_items=[
 		[3,"Engineering"],
 		[7,"First Aid"],
 		[9,"Fishing"],
-		//[11,"Inscription"],
-		//[10,"Jewelcrafting"],
 		[1,"Leatherworking"],
 		[2,"Tailoring"]
 	]],
-	/*[3,"Gems",,[
-		[0,"Red"],
-		[1,"Blue"],
-		[2,"Yellow"],
-		[3,"Purple"],
-		[4,"Green"],
-		[5,"Orange"],
-		[6,"Meta"],
-		[7,"Simple"],
-		[8,"Prismatic"]
-	]],*/
-	[15,"Miscellaneous",,[
-		[3,"Holiday"],
-		[0,"Junk"],
-		[1,"Reagents"],
-		[5,"Mounts"],
-		[2,"Companions"],
-		[4,"Other"]
-	]],
-	[10,"Currency"],
+	[15,"Miscellaneous"],
 	[12,"Quest"],
 	[13,"Keys"]
 ];
@@ -875,34 +815,19 @@ var g_item_slots={
 	28:"Relic"
 };
 var g_item_classes={
+    0:"Consumable",
 	5:"Reagent",
-	10:"Currency",
 	12:"Quest",
-	13:"Key"
+	13:"Key",
+    15:"Miscellaneous"
 };
 var g_item_subclasses={
-	0:{
-		0:"Consumable",
-		1:"Potion",
-		2:"Elixir",
-		3:"Flask",
-		4:"Scroll",
-		5:"Food & Drink",
-		6:"Perm. Enhancement",
-		"-3":"Temp. Enhancement",
-		7:"Bandage",
-		8:"Other (Consumables)"
-	},
 	1:{
 		0:"Bag",
 		1:"Soul Bag",
 		2:"Herb Bag",
 		3:"Enchanting Bag",
-		4:"Engineering Bag",
-		5:"Gem Bag",
-		6:"Mining Bag",
-		7:"Leatherworking Bag",
-		8:"Inscription Bag"
+		4:"Engineering Bag"
 	},
 	2:{
 		0:"One-Handed Axe",
@@ -923,17 +848,6 @@ var g_item_subclasses={
 		19:"Wand",
 		20:"Fishing Pole"
 	},
-	3:{
-		0:"Red Gem",
-		1:"Blue Gem",
-		2:"Yellow Gem",
-		3:"Purple Gem",
-		4:"Green Gem",
-		5:"Orange Gem",
-		6:"Meta Gem",
-		7:"Simple Gem",
-		8:"Prismatic Gem"
-	},
 	4:{
 		"-8":"Shirt",
 		"-7":"Tabard",
@@ -950,29 +864,17 @@ var g_item_subclasses={
 		6:"Shield",
 		7:"Libram",
 		8:"Idol",
-		9:"Totem",
-		10:"Sigil"
+		9:"Totem"
 	},
 	6:{
 		2:"Arrow",
 		3:"Bullet"
 	},
 	7:{
+        0:"Trade Goods",
 		1:"Part",
 		2:"Explosive",
-		3:"Device",
-		4:"Jewelcrafting",
-		5:"Cloth",
-		6:"Leather",
-		7:"Metal & Stone",
-		8:"Meat",
-		9:"Herb",
-		10:"Elemental",
-		12:"Enchanting",
-		13:"Material",
-		14:"Armor Enchantment",
-		15:"Weapon Enchantment",
-		11:"Other (Trade Goods)"
+		3:"Device"
 	},
 	9:{
 		0:"Book",
@@ -984,44 +886,11 @@ var g_item_subclasses={
 		6:"Alchemy Recipe",
 		7:"First Aid Book",
 		8:"Enchanting Formula",
-		9:"Fishing Book",
-		10:"Jewelcrafting Design",
-		11:"Inscription Technique"
+		9:"Fishing Book"
 	},
 	11:{
 		2:"Quiver",
 		3:"Ammo Pouch"
-	},
-	15:{
-		"-7":"Flying Mount",
-		"-6":"Combat Pet",
-		"-2":"Armor Token",
-		0:"Junk",
-		1:"Reagent",
-		2:"Companion",
-		3:"Holiday",
-		4:"Other (Miscellaneous)",
-		5:"Mount"
-	},
-	16:{
-		6:"Death Knight Glyph",
-		11:"Druid Glyph",
-		3:"Hunter Glyph",
-		8:"Mage Glyph",
-		2:"Paladin Glyph",
-		5:"Priest Glyph",
-		4:"Rogue Glyph",
-		7:"Shaman Glyph",
-		9:"Warlock Glyph",
-		1:"Warrior Glyph"
-	}
-};
-var g_item_subsubclasses={
-	0:{
-		2:{
-			1:"Battle Elixir",
-			2:"Guardian Elixir"
-		}
 	}
 };
 var g_itemset_types={

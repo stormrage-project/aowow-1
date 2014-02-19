@@ -4562,12 +4562,6 @@ Listview.funcBox = {
 		}
 	},
 	getItemType: function (c, a, b) {
-		if (b != null && g_item_subsubclasses[c] != null && g_item_subsubclasses[c][a] != null) {
-			return {
-				url: "?items=" + c + "." + a + "." + b,
-				text: g_item_subsubclasses[c][a][b]
-			}
-		}
 		if (g_item_subclasses[c] != null) {
 			return {
 				url: "?items=" + c + "." + a,
