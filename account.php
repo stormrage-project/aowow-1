@@ -31,8 +31,11 @@ if($_REQUEST['account'] == 'signup')
     } 
     else 
     {
-        // Совпадают ли введенные пароли?
-        if($_POST['password'] != $_POST['c_password'])
+        if (preg_match("/^[a-z]+([-_.]?[a-z0-9]+)*$/i", $_POST['username']) == 0)
+        {
+            $smarty->assign('signup_error', $smarty->get_config_vars('Wrong_username'));
+        }
+        elseif ($_POST['password'] != $_POST['c_password'])
         {
             $smarty->assign('signup_error', $smarty->get_config_vars('Different_passwords'));
         }
