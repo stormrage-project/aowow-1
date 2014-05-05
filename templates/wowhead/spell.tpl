@@ -26,7 +26,7 @@
 		</table>
 
 		<div class="text">
-			<a href="http://old.wowhead.com/?{$query}" class="button-red"><em><b><i>Wowhead</i></b><span>Wowhead</span></em></a>
+			<a href="http://wowhead.com/?{$query}" class="button-red"><em><b><i>Wowhead</i></b><span>Wowhead</span></em></a>
 			<h1>{$spell.name}</h1>
 
 			<div id="icon{$spell.entry}-generic" style="float: left"></div>
